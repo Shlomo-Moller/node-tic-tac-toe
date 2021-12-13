@@ -7,6 +7,10 @@ body {
 /* Global box-sizing: */
 *, *:before, *:after { box-sizing: inherit }
 
+.no-display { display: none }
+
+.user-item { cursor: pointer }
+
 #board {
     display: grid;
     grid-template-columns: repeat(3, auto);
