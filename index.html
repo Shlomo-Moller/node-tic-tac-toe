@@ -6,6 +6,10 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <link rel='stylesheet' href='./styles.css' />
     <title>Tic Tac Toe</title>
+    <!-- Require the file exposed by the socket.io app which hosted in localhost:3000: -->
+    <script defer src='http://localhost:3000/socket.io/socket.io.js'></script>
+    <!-- Require our script which use the `io` function (provided by the file required above) to get the socket variable: -->
+    <script defer src='./script.js'></script>
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
