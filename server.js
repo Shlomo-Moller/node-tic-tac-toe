@@ -12,12 +12,12 @@ io.on('connection', socket => {
     socket.on('disconnect', () => {
         socket.to(socket.id).emit('you-disconnected')
         delete db.users[socket.id]
-            socket.broadcast.emit('other-disconnected', name)
+        socket.broadcast.emit('other-disconnected', { id: socket.id, name })
     })
     socket.on('new-user', name => {
         db.users[socket.id] = name
         socket.to(socket.id).emit('you-connected')
-        socket.broadcast.emit('other-connected', name)
+        socket.broadcast.emit('other-connected', { id: socket.id, name })
     })
 })
 
