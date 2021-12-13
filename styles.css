@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', serif;
+    text-align: center;
+}
+*, *:before, *:after { box-sizing: inherit }
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+}
+.cell {
+    font-size: 30px;
+    width: 2em;
+    height: 2em;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cell:nth-child(3n + 1) { border-left: none }
+.cell:nth-child(3n + 3) { border-right: none }
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) { border-top: none }
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) { border-bottom: none }
