@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "concurrently \"nodemon server.js\" \"parcel index.html --open\""
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "parcel-bundler": "^1.12.5"
   }
 }
