@@ -4,6 +4,7 @@ body {
     font-family: 'Segoe UI', serif;
     text-align: center;
 }
+/* Global box-sizing: */
 *, *:before, *:after { box-sizing: inherit }
 
 #board {
